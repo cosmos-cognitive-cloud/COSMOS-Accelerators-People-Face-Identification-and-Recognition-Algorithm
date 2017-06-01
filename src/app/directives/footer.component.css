@@ -1,0 +1,43 @@
+.info-top-line {
+    padding-top:5px;
+}
+.info-with-more {
+    margin-bottom:0px;
+}
+.social-networks {
+    margin-top: 10px;
+}
+.fusion-social-network-icon {
+    font-size: 16px;
+    color:#333333;
+    text-decoration: none;
+}
+.middle-icon {
+    margin-right:10px;
+    margin-left:10px;
+}
+.footer-copyright-area {
+    background-color: #fafafa;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 10px;
+}
+.copyright-content {
+    text-align: center;
+    width: 100%;
+}
+
+.copyright-notice {
+    letter-spacing: 1px;
+    color: #666666;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom:20px;
+}
+
+.copyright-notice a {
+    color: #666666;
+    text-decoration: none;
+}

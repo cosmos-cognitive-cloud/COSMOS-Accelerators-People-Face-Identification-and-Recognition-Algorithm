@@ -1,0 +1,125 @@
+<div class="outer-container hidden-xs">
+    <div class="inner-container"
+        [ngClass]="{'inner-container-fullsize': fullSize, 'inner-container-condensedsize': !fullSize, 'inner-container-blue': rightJustify}">
+        <video *ngIf="!rightJustify" poster="{{apiBackgroundImage}}.jpg" src="{{apiBackgroundImage}}.mp4"
+                autoplay loop>
+            <source src"{{apiBackgroundImage}}.mp4" type="video/mp4">
+        </video>
+        <div class="right-justify-video" *ngIf="rightJustify">
+            <div>
+                <video src="{{apiBackgroundImage}}.mp4" autoplay loop></video>
+            </div>
+        </div>
+        <div class="video-overlay" style="vertical-align: middle">
+            <div class="hero-banner__content container" style="vertical-align: middle">
+                    <div class="col-sm-12" style="vertical-align: middle">
+                        <h1 [ngClass]="{'text--light text--lg text--white': !lightBackground, 'text--lg': lightBackground}">{{apiTitle}}</h1>
+                        <h6  *ngIf="isPreview"  [ngClass]="{'text--light text--lg text--white': !lightBackground, 'text--lg': lightBackground}">Preview</h6>
+                        <p [ngClass]="{'text--semilight text--sm text--white': !lightBackground}" class="hero-copy">
+                            {{apiDescription}}
+                        </p>
+                        <div *ngIf="showDevPortalActionButton" class="fusion-button-wrapper fusion-alignright">
+                            <a class="fusion-button button-flat button-square button-large button-custom button cursor-pointer" (click)="openDeveloperPortal()">
+                                Get Started Now
+                            </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="hero-banner-container row visible-xs" [style.background-image]="'url(' + apiBackgroundImage + '.jpg)'">
+    <div class="hero-banner__content-container">
+        <div class="hero-banner__content container col-sm-12 clearfix">
+            <div style="vertical-align: middle">
+            <h1 [ngClass]="{'text--light text--lg text--white': !lightBackground, 'text--lg': lightBackground}">{{apiTitle}}</h1>
+            <p [ngClass]="{'text--semilight text--sm text--white': !lightBackground}">
+                {{apiDescription}}
+            </p>
+
+                <div *ngIf="showDevPortalActionButton" class="fusion-button-wrapper fusion-alignright">
+                    <a class="fusion-button button-flat button-square button-large button-custom button cursor-pointer" (click)="openDeveloperPortal()">
+                        Get Started Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<!--<div bsModal #contactModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" id="contactModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="contactModal.hide()" aria-label="Close">
+                    <span>&times;</span>
+                </button>
+                <h2 class="modal-title">Contact us</h2>
+            </div>
+            <div class="modal-body" [style.max-height]="modalHeight">
+                <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+                <div class="alert alert-success" *ngIf="successMessage">{{successMessage}}</div>
+                <p>Get a free COSMOS\u2122 demo and learn how to power your existing marketing technology with&nbsp;AI.</p>
+                <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control"
+                            required
+                            [(ngModel)]="contactUs.firstName" name="firstName"
+                            #contactFirstName="ngModel" />
+                        <div [hidden]="contactFirstName.valid || contactFirstName.pristine"
+                            class="alert alert-danger">
+                            First name is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control"
+                            required
+                            [(ngModel)]="contactUs.lastName" name="lastName"
+                            #contactLastName="ngModel" >
+                        <div [hidden]="contactLastName.valid || contactLastName.pristine"
+                            class="alert alert-danger">
+                            Last name is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control"
+                            required
+                            [(ngModel)]="contactUs.email" name="email"
+                            #contactEmailAddress="ngModel" >
+                        <div [hidden]="contactEmailAddress.valid || contactEmailAddress.pristine"
+                            class="alert alert-danger">
+                            Email is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="organization">Organization</label>
+                        <input type="text" class="form-control"
+                            required
+                            [(ngModel)]="contactUs.organization" name="organization"
+                            #contactOrganization="ngModel" >
+                        <div [hidden]="contactOrganization.valid || contactOrganization.pristine"
+                            class="alert alert-danger">
+                            Organization is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role/Title</label>
+                        <input type="text" class="form-control" id="role"
+                            required
+                            [(ngModel)]="contactUs.role" name="role"
+                            #contactRole="ngModel" >
+                        <div [hidden]="contactRole.valid || contactRole.pristine"
+                            class="alert alert-danger">
+                            Role/Title is required
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-default" [disabled]="!contactForm.form.valid || submitted">Submit</button>
+                    <button type="button" class="btn btn-default" (click)="contactModal.hide()">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>-->

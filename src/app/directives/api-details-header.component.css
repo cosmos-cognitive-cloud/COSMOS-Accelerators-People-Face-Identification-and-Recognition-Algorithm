@@ -1,0 +1,12 @@
+h2 {
+    text-align: center
+}
+
+api-details-header
+{
+    margin-bottom: 25px;
+    margin-top:5px;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    width: 100%;
+}

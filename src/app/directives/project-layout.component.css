@@ -1,0 +1,9 @@
+#project-layout-left-menu {
+    float: left;
+    width: 50%
+}
+
+#project-layout-right-menu {
+    float: right;
+    width: 50%
+}

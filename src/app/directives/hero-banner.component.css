@@ -1,0 +1,108 @@
+.outer-container {
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
+}
+.inner-container {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width:100%;
+    background-color: black;
+}
+.inner-container-blue {
+    background-color: black;
+}
+.inner-container-fullsize {
+    max-height: 415px;
+}
+.inner-container-condensedsize {
+    max-height: 375px;
+}
+.right-justify-video {
+    position:relative;
+    clear:both;
+    right: 50px;
+}
+.right-justify-video > div {
+    float:right;
+    text-align:right;
+}
+.right-justify-video video {
+    border-radius: 12px 12px 0 0;
+    border: 6px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.hero-banner__content {
+    margin-top: 50px;
+    height: fit-content;
+}
+.modal-dialog {
+    margin-top:50px;
+}
+.modal-body {
+    overflow-y: scroll;
+}
+.alert-danger {
+    height: 28px;
+    line-height: 0px;
+}
+.video-overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    flex-direction: column;
+    /*height: 415px;*/
+    height:fit-content;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    /*margin-top: -20px;*/
+    margin-top:0px;
+    width: 100%;
+}
+video {
+    width: 100%;
+    height: 100%;
+    margin-top: 71px;
+}
+
+.fusion-button-wrapper {
+    margin-top: 35px;;
+}
+
+.button-large {
+    padding: 13px 29px;
+    line-height: 17px;
+    font-size: 14px;
+}
+
+.fusion-button-text, .fusion-button.button i {
+    color: #fff;
+}
+
+.fusion-button.button {
+    border-width: 0px;
+    border-color: #fff;
+    text-decoration: none;
+    color: #fff;
+}
+
+.fusion-button.button:hover .fusion-button-icon-divider, .fusion-button.button:hover .fusion-button-icon-divider, .fusion-button.button:active .fusion-button-icon-divider {
+    border-color: #fff;
+}
+
+.fusion-button.button {
+    background: #32b2e8;
+}
+
+.fusion-button.button:hover, .button:focus, .fusion-button.button:active {
+    background: #00a3e8;
+}
+
+.fusion-button.button {
+    width: auto;
+}
