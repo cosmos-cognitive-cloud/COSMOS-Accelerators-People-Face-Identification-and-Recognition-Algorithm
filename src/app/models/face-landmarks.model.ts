@@ -1,0 +1,31 @@
+import {IPoint} from './point.model'; 
+
+export interface IFaceLandmarks {
+    pupilLeft: IPoint,
+    pupilRight: IPoint,
+    noseTip: IPoint,
+    mouthLeft: IPoint,
+    mouthRight: IPoint,
+    eyebrowLeftOuter: IPoint,
+    eyebrowLeftInner: IPoint,
+    eyebrowRightInner: IPoint,
+    eyebrowRightOuter: IPoint,
+    eyeLeftOuter: IPoint,
+    eyeLeftTop: IPoint,
+    eyeLeftBottom: IPoint,
+    eyeLeftInner: IPoint,
+    eyeRightInner: IPoint,
+    eyeRightTop: IPoint,
+    eyeRightBottom: IPoint,
+    eyeRightOuter: IPoint,
+    noseRootLeft: IPoint,
+    noseRootRight: IPoint,
+    noseLeftAlarTop: IPoint,
+    noseRightAlarTop: IPoint,
+    noseLeftAlarOutTip: IPoint,
+    noseRightAlarOutTip: IPoint,
+    upperLipTop: IPoint,
+    upperLipBottom: IPoint,
+    underLipTop: IPoint,
+    underLipBottom: IPoint
+}

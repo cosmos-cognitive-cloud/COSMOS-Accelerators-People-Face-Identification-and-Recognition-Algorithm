@@ -1,0 +1,36 @@
+<div class="maindiv">    
+    <api-details-header 
+        apiTitle="Face Detection"
+        apiDescription="Detecting faces in images is the first step to a number of exciting facial recognition and emotion-prediction tasks. For example, enabling a 1-1 in-store experience for loyal customers, powering apps that utilize a mobile camera, or improving log-in security for known customers."
+        apiDescription2="The Face Detection API enables you to detect one or more faces in an image, along with selected attributes such as predicted age, gender, and the presence of other facial features. 27 landmark positions are also recorded for each face identified."
+        rowStyleClass="tablerow1"
+    >
+        <div api-content>
+            <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+            <div class="row">
+                <face-viewer-component (faceDetected)="onFaceDetected('1', $event)" (faceError)="onError($event)"></face-viewer-component>
+                <div class="col-xs-12 col-sm-6">
+                    <output-section style="height: 420px"
+                        [showButtons]="showCodeButtons" 
+                        [isApiResultLoading]="isLoading"
+                        buttonContextText="Results" 
+                        [showJSON]="!isLoading"
+                        jsonText="Number of faces: {{ faces ? faces.length : 0 }}&#10;{{ faces | json }}"
+                    >
+                            <div formatted-output>
+                                
+                            </div>
+                    </output-section>
+                </div>
+            </div>
+            <div class="row filmstrip-row container">
+                <div *ngFor="let imagePath of imageList" class="col-xs-6 col-sm-4 col-md-3 col-lg-2 filmstrip">
+                    <img [src]="imagePath" (click)="selectImage(imagePath)" [ngClass]="imagePath === selectedImagePath ? 'selected' : ''" />
+                </div>
+            </div>
+        </div>
+    </api-details-header>
+</div>
+
+
+

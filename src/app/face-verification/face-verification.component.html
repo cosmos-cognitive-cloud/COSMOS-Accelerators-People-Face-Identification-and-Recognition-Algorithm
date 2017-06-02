@@ -1,0 +1,35 @@
+<div class="maindiv">    
+    <api-details-header 
+        apiTitle="Face Verification"
+        apiDescription="Check the likelihood that two faces belong to the same person. The API will return a confidence score about how likely it is that the two faces belong to one person."
+        rowStyleClass="tablerow2"
+    >
+        <div api-content>
+            <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+
+            <div class="row">
+                <face-viewer-component #fvc1 (faceDetecting)="onFaceDetecting()" (faceError)="onError($event)"></face-viewer-component>
+                <face-viewer-component #fvc2 (faceDetecting)="onFaceDetecting()" (faceError)="onError($event)"></face-viewer-component>
+            </div>
+            <div class="row result-row">
+                <div class="col-xs-12">
+                    <div class="verification-box">
+                        <span>Verification Result:</span>
+                        <br/>
+                        <span>{{ verificationStatus }}</span>
+                        <br/>
+                        <span>{{ resultStatus }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row result-row">
+                <div *ngFor="let imagePair of imagePairs" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="row" (click)="selectImagePair(imagePair)" class="image-pair" [ngClass]="imagePair.image1 === selectedImagePair.image1 && imagePair.image2 === selectedImagePair.image2 ? 'selected' : ''">
+                        <img [src]="imagePair.image1" class="col-xs-6" />
+                        <img [src]="imagePair.image2" class="col-xs-6" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </api-details-header>
+</div>

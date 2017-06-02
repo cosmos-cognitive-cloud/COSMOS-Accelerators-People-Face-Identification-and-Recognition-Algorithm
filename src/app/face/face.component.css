@@ -1,0 +1,11 @@
+
+.component-container {
+    padding-top:35px;
+}
+
+img {
+    max-width: 100%;
+}
+.alternate-row {
+    background-color: #fafafa;
+}

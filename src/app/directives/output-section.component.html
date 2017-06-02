@@ -1,0 +1,25 @@
+<div class="output-section"  style="overflow: hidden;">
+    <div style="height: inherit">
+        <div *ngIf="!isApiResultLoading" style="height: inherit">
+            <div class="btn-group btn-group-justified" role="group" *ngIf="showButtons">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-info" [ngClass]="{'active': !showJSON }" (click)="toggleJSON(false)">{{buttonContextText}}</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button class="btn btn-info" [ngClass]="{'active': showJSON }" (click)="toggleJSON(true)">JSON</button>
+                </div>
+            </div>
+            
+            <div class="code-container-withButtons" *ngIf="showButtons"  [hidden]="!showJSON">
+                <pre class="code-withButtons" *ngIf="showButtons" style="overflow: scroll;">{{jsonText}}</pre>
+            </div>
+            <div class="code-container-noButtons" *ngIf="!showButtons"   [hidden]="!showJSON">
+                <pre class="code-noButtons" style="overflow: scroll;">{{jsonText}}</pre>
+            </div>
+            <div [hidden]="showJSON">
+                <ng-content select="[formatted-output]"></ng-content>
+            </div>
+        </div>
+        <h1 class="text-info display-middle" *ngIf="isApiResultLoading"><i class="glyphicon glyphicon-refresh spinning"></i></h1>
+    </div>
+</div>
