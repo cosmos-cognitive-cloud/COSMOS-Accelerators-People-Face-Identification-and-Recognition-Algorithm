@@ -1,3 +1,6 @@
+var MICROSOFT_APP_ID = 'cecc3631-a6ed-43a7-9da6-5e60d4063dce';
+var MICROSOFT_APP_PASSWORD = 'EzaNHy3q9gZCRBNBS6YHe37';
+
 var restify = require('restify');
 var builder = require('botbuilder');
 
