@@ -7,7 +7,7 @@ export class DataService {
 
     protected storageUrl = "https://cosmosstore.blob.core.windows.net/images/";
     protected localServer = "http://cosmosai-services.azurewebsites.net/";
-    protected apiServer = "https://vivatechapi.cosmos.ai/";
+    protected apiServer = "https://cognitive.cosmos.ai/";
     protected textApiServer = "https://westus.api.cognitive.microsoft.com/";
     protected bingApiServer = "https://api.cognitive.microsoft.com/bing/v5.0/";
 
