@@ -25,7 +25,7 @@ Now that you have your environment set up, you can finally start working with th
 3. Ctrl + Shift + ` to open a terminal window
 4. Type `npm install` to download the project's packages
 5. Type `ng serve` to run the application via `http://localhost:4200/`.  The app will automatically reload if you change any of the source files.
-6. Success!  You should see a working demo of the Facial Recognition API built on Angular.
+6. Success!  You should see a working demo of the People Face Identification and Recognition Algorithm built on Angular.
 
 ## Development server
 
